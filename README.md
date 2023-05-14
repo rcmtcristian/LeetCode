@@ -30,6 +30,8 @@ CodeTrack allows any developer to build a profile that represents their work, th
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
+### 🚀 Also see My [CodeWars](https://github.com/rcmtcristian/Codewars) Repo
+
 ## Lessons learned
 
 "Coding is not just code, that is a live thing to serve everyone!" - Bùi Thế Duy
