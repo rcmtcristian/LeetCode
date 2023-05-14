@@ -91,3 +91,12 @@ var twoSum = function(nums, target) {
         }
     }
 }
+
+// Explanation 
+// We initialize a Map called indicesMap to keep track of the indices of each element in the array.
+// We iterate through the array nums and for each element nums[i]:
+// We compute the complement complement = target - nums[i].
+// We check if the indicesMap already has the complement as a key. If it does, we return the indices of the two elements that add up to the target.
+// Otherwise, we add nums[i] to indicesMap with its index as the value.
+// If we have iterated through the entire array without finding a solution, we return null.
+// The time complexity of this solution is O(n) because we only iterate through the array once, and each lookup in the hash table takes constant time on average.
