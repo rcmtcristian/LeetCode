@@ -1,0 +1,17 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "![Leetcode2](https://github.com/rcmtcristian/Codewars/assets/20276785/fe8d2a61-dea6-48cd-9acb-a91c48d8629c)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.1"
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
