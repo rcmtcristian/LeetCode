@@ -18,7 +18,7 @@ const assert = require('assert');
 
 // Main Solution
 const decodeXORArray = {
-    decode: function(encoded, first) {
+    decode: function(encoded: number[], first: number): number[] {
         let ans = [first];
 
         for (let i = 0; i < encoded.length; i++) {
