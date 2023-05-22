@@ -7,16 +7,16 @@ function countPairs(nums: number[], k: number): number {
     let count: number = 0;
 
     // iterate over our out loop
-    for ( let i: number = 0; i < nums.length; i++ ) {
-        // iterate to get the numbers we are comparing with
-        for ( let j: number = i + 1; j < nums.length; j++ ) {
-            // check your condition and if it passes add to your counter
-            if ( (nums[i] === nums[j]) && ((i * j) % k === 0)) {
-                count += 1;
-            }
+    for (let i: number = 0; i < nums.length; i++) {
+      // iterate to get the numbers we are comparing with
+      for (let j: number = i + 1; j < nums.length; j++) {
+        // check your condition and if it passes add to your counter
+        if (nums[i] === nums[j] && (i * j) % k === 0) {
+          count += 1;
         }
+      }
     }
 
     // return the total count
-    return count
+    return count;
 };
