@@ -126,6 +126,19 @@ function floodFill(image, sr, sc, newColor) {
 
       
 //  Jest test 
+
+describe('test leetcode', function() {
+    it('test leetcode.floodFill', function(done) {
+        let image = [[1,1,1],[1,1,0],[1,0,1]];
+        let sr = 1;
+        let sc = 1;
+        let newColor = 2;
+        let result = leetcode.floodFill(image, sr, sc, newColor);
+        assert.deepEqual([[2,2,2],[2,2,0],[2,0,1]], result);
+        done();
+    })
+})
+
 test("flood fill", () => {
   expect(
     floodFill(
