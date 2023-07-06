@@ -40,6 +40,7 @@ var reverseList = function(head) {
 }
 
 // Alternate Solution
+
 // Initialize prev to null
 let prev = null; 
 // While there is a value in head
@@ -54,3 +55,39 @@ while(head){
     head = temp; 
 }
 return prev; 
+
+
+// recursive
+function reverseLinkedList(head) {
+  // Base case: an empty list or a list with a single node
+  if (head === null || head.next === null) {
+    return head;
+  }
+
+  // Reverse the rest of the list recursively
+  const reversedList = reverseLinkedList(head.next);
+
+  // Adjust the pointers to reverse the current node
+  head.next.next = head;
+  head.next = null;
+
+  return reversedList;
+}
+
+
+// iterative approach with three pointers
+
+function reverseLinkedList(head) {
+  let prev = null;
+  let current = head;
+
+  while (current !== null) {
+    const next = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
+  }
+
+  return prev;
+}
+
