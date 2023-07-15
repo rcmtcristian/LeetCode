@@ -1,4 +1,4 @@
-// 
+//
 
 /**
  * Definition for singly-linked list.
@@ -16,12 +16,16 @@ class ListNode {
   val: number;
   next: ListNode | null;
   constructor(val?: number, next?: ListNode | null) {
-    this.val = (val === undefined ? 0 : val);
-    this.next = (next === undefined ? null : next);
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
   }
 }
 
-function reverseBetween(head: ListNode | null, left: number, right: number): ListNode | null {
+function reverseBetween(
+  head: ListNode | null,
+  left: number,
+  right: number
+): ListNode | null {
   let dummyNode = new ListNode(0);
   dummyNode.next = head;
 
@@ -48,32 +52,41 @@ function reverseBetween(head: ListNode | null, left: number, right: number): Lis
 
   // Step 5: Return the modified list starting from the dummy node's next
   return dummyNode.next;
-};
+}
 
 // Alternative Solution
-function reverseBetween(head: ListNode | null, left: number, right: number): ListNode | null {
-    if(!head) {
-        return null
-    }
+function reverseBetween(
+  head: ListNode | null,
+  left: number,
+  right: number
+): ListNode | null {
+  if (!head) {
+    return null;
+  }
 
-    if(!head.next) {
-        return head
-    }
+  if (!head.next) {
+    return head;
+  }
 
-    let node = head, stack = [];
+  let node = head,
+    stack = [];
 
-    while(node) {
-        stack.push(node.val);
-        node = node.next
-    }
+  while (node) {
+    stack.push(node.val);
+    node = node.next;
+  }
 
-    stack.splice(left - 1, right - left + 1, ...stack.slice(left - 1, right).reverse());
+  stack.splice(
+    left - 1,
+    right - left + 1,
+    ...stack.slice(left - 1, right).reverse()
+  );
 
-    node = head;
-    for(let i = 0; i < stack.length; i += 1) {
-        node.val = stack[i];
-        node = node.next
-    }
+  node = head;
+  for (let i = 0; i < stack.length; i += 1) {
+    node.val = stack[i];
+    node = node.next;
+  }
 
-    return head
-};
+  return head;
+}
